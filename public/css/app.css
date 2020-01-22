@@ -112,3 +112,45 @@ a {
   transition: 0.1s ease;
   white-space: nowrap;
 }
+.header-wrapper-left-wrapper {
+  width: 100px;
+  position: absolute;
+  top: 7;
+  left: 700;
+}
+.header-wrapper-left-wrapper-text {
+  color: darkgray;
+}
+.search-form-input {
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: 3px;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, .5);
+  float: left;
+  font-size: 13px;
+  height: 32px;
+  line-height: 19px;
+  margin: 0;
+  outline: none;
+  padding-left: 8px;
+  padding-right: 30px;
+  transition: width 0.15s;
+  width: 180px;
+}
+.header-wrapper-left-search {
+  position: relative;
+}
+.search-submit-btn {
+  display: none;
+}
+.fa-home {
+  margin-left: 10px;
+}
+.fa-search {
+  position: absolute;
+  color: white;
+  top: 7;
+  right: 12;
+}

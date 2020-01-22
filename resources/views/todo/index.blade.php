@@ -5,5 +5,6 @@
 @section("content")
 @include("subview.header")
  <div class="index-wrapper">
+   
  </div>
 @endsection
