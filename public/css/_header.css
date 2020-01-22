@@ -1,0 +1,29 @@
+.header-wrapper {
+  height: 32px;
+  position: relative;
+  background-color: #026aa7;
+  padding: 4px;
+}
+.header-wrapper-left {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+.header-wrapper-left-link {
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  align-items: center;
+  background-color: rgba(255, 255, 255, .3);
+  box-shadow: none;
+  color: #fff;
+  display: flex;
+  font-weight: 700;
+  height: 32px;
+  line-height: 32px;
+  margin: 0 4px 0 0;
+  padding: 0;
+  transition: 0.1s ease;
+  white-space: nowrap;
+}
