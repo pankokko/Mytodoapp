@@ -33,27 +33,70 @@
         </div>
       </div>
     </div>
-      <div class="index-folder">
-        <div class="index-folder-container">
-          <p class="index-folder-container-text">フォルダー</p>
-            <div class="folder-add">
-              <a class="folder-add-link" href="#">
-                <p class="folder-add-link-text">フォルダーを追加する</p>
-              </a>
-            </div>   
-        </div>
-        <a href="#" class="folder-list">
-          <p class="folder-list-text">フォルダー1</p>
-        </a>
-        <a href="#" class="folder-list">
-          <p class="folder-list-text">フォルダー2</p>
-        </a>
-        <a href="#" class="folder-list">
-          <p class="folder-list-text">フォルダー3</p>
-        </a>
+    <div class="index-folder">
+      <div class="index-folder-container">
+        <p class="index-folder-container-text">フォルダー</p>
+          <div class="folder-add">
+            <a class="folder-add-link" href="#">
+              <p class="folder-add-link-text">フォルダーを追加する</p>
+            </a>
+          </div>   
       </div>
-      
+      <a href="#" class="folder-list">
+        <p class="folder-list-text">フォルダー1</p>
+      </a>
+      <a href="#" class="folder-list">
+        <p class="folder-list-text">フォルダー2</p>
+      </a>
+      <a href="#" class="folder-list">
+        <p class="folder-list-text">フォルダー3</p>
+      </a>
     </div>
+  </div>
+  <div class="index-todo">
+    <p class="index-todo-title">タスク一覧</p>
+    <div class="index-todo-container">
+      <div class="index-todo-container-add"> 
+        <div class="index-todo-container-add-btn">
+          <a class="index-todo-container-add-btn-link" href="{{route("todo/new")}}">
+            <p class="index-todo-container-add-btn-link-text">タスクを追加する</p>
+          </a>  
+        </div>
+      </div>
+    </div>
+      <div class="task-list">
+        <div class="task-list-name">課題名</div>
+        <div class="task-list-trio">
+          <div class="task-list-trio-status ">状態</div>
+          <div class="task-list-trio-limit ">期限</div>
+          <div class="task-list-trio-updated ">更新日時</div>
+        </div>
+      </div>
+      <div class="current-tasks">
+          <div class="current-tasks-name"><a class="current-tasks-name-link" href="#">ああああああああああああああああああ</a></div>
+          <div class="current-tasks-trio">
+            <div class="current-tasks-trio-status ">未処理</div>
+            <div class="current-tasks-trio-limit ">2020-1-20</div>
+            <div class="current-tasks-trio-updated ">2020-1-30</div>
+          </div>
+      </div>
+      <div class="current-tasks">
+          <div class="current-tasks-name"><a class="current-tasks-name-link" href="#">ああああああああああああああああああ</a></div>
+          <div class="current-tasks-trio">
+            <div class="current-tasks-trio-status ">処理中</div>
+            <div class="current-tasks-trio-limit ">2020-1-20</div>
+            <div class="current-tasks-trio-updated ">2020-1-30</div>
+          </div>
+      </div>
+      <div class="current-tasks">
+          <div class="current-tasks-name"><a class="current-tasks-name-link" href="#">サンプル</a></div>
+          <div class="current-tasks-trio">
+            <div class="current-tasks-trio-status ">完了</div>
+            <div class="current-tasks-trio-limit ">2020-1-20</div>
+            <div class="current-tasks-trio-updated ">2020-1-30</div>
+          </div>
+      </div>
+      </div>
   </div>
 </div>
 @endsection
