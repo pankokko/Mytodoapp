@@ -111,3 +111,98 @@
   box-shadow: 0px 0px 3px;
   border: 1px solid #4dc0b5;
 }
+.index-todo {
+  width: 1200px;
+  max-height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.index-todo-title {
+  background: green;
+  line-height: 45px;
+  padding-left: 20px;
+  height: 45px;
+}
+.index-todo-container {
+  border: 1px solid black;
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+}
+.index-todo-container-add {
+  margin-right: 40px;
+  margin-top: 22px;
+  text-align: center;
+  width: 1000px;
+}
+.index-todo-container-add-btn {
+  position: absolute;
+  right: 115px;
+  top: 20px;
+  width: 1000px;
+  padding: 5px;
+  border: 1px solid #666 6;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px;
+}
+.index-todo-container-add-btn-link-text {
+  font-weight: bold;
+  color: black;
+}
+.task-list {
+  display: flex;
+  justify-content: row;
+  border: 1px solid black;
+  padding: 10px;
+  font-weight: bold;
+}
+.task-list-name {
+  margin-left: 35px;
+}
+.task-list-trio {
+  margin-left: 680px;
+  display: flex;
+  justify-content: row;
+}
+.task-list-trio-limit {
+  margin-left: 100px;
+}
+.task-list-trio-updated {
+  margin-left: 100px;
+}
+.current-tasks {
+  display: flex;
+  position: relative;
+  justify-content: row;
+  border: 1px solid black;
+  padding: 10px;
+}
+.current-tasks-name {
+  position: absolute;
+  top: 10;
+  left: 38;
+}
+.current-tasks-trio {
+  margin-left: 755px;
+  display: flex;
+  justify-content: row;
+}
+.current-tasks-trio-status {
+  height: 25px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: pink;
+  padding-right: 5px;
+  padding-left: 5px;
+  width: 60px;
+}
+.current-tasks-trio-limit {
+  position: absolute;
+  left: 890px;
+}
+.current-tasks-trio-updated {
+  position: absolute;
+  left: 1030px;
+}
