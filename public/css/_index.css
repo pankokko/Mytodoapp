@@ -1,18 +1,113 @@
 .index-wrapper {
   width: 1200px;
-  height: 1400px;
-  margin: 0 auto;
-}
-.index-wrapper-sidenav {
+  display: flex;
+  justify-content: row;
   margin-top: 100px;
+  margin-left : auto;
+  margin-right: auto;
+}
+.index-wrapper-user {
+  width: 400px;
+  padding-bottom: 15px;
+  height: 220px;
+  box-shadow: 0px 0px 3px;
+  border: 1px solid #666 6;
+}
+.index-wrapper-user-count {
   text-align: center;
+  margin-top: 5px;
+  margin-bottom: 13px;
+}
+.index-wrapper-user-picture {
+  padding-top: 10px;
+  text-align: center;
+}
+.index-wrapper-user-text-p {
+  background-color: #4dc0b5;
+  text-align: center;
+  height: 30px;
+  border: 1px solid #666 6;
+}
+.index-wrapper-user-status {
+  display: flex;
+  justify-content: center;
+}
+.index-wrapper-user-status-doing {
+  text-align: center;
+  width: 85px;
+  margin-right: 40px;
+}
+.index-wrapper-user-status-doing-container {
+  border-radius: 7px;
+  background-color: blue;
+}
+.index-wrapper-user-status-doing-container-text {
+  color: white;
+  font-weight: bold;
+}
+.index-wrapper-user-status-notyet {
+  width: 85px;
+  text-align: center;
+  margin-right: 40px;
+}
+.index-wrapper-user-status-notyet-container {
+  border-radius: 7px;
+  background-color: green;
+}
+.index-wrapper-user-status-notyet-container-text {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.index-wrapper-user-status-done {
+  text-align: center;
+  width: 85px;
+}
+.index-wrapper-user-status-done-container {
+  border-radius: 7px;
+  background-color: pink;
+}
+.index-wrapper-user-status-done-container-text {
+  color: white;
+  font-weight: bold;
+}
+.index-folder {
+  width: 400px;
+  height: 100px;
+  box-shadow: 0px 0px 3px;
+  border: 1px solid #666 6;
   margin-left: 50px;
-  width: 210px;
 }
-.index-wrapper-list {
-  width: 100px;
-  margin-left: 370px;
+.index-folder-container {
+  text-align: center;
+  padding-bottom: 23;
 }
-.nav-icon {
-  padding-right: 12px;
+.index-folder-container-text {
+  background-color: #4dc0b5;
+}
+.folder-add {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 3px;
+  border: 1px solid #666 6;
+  width: 300px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.folder-add-link-text {
+  color: black;
+}
+.folder-list {
+  text-align: center;
+  text-decoration: none;
+}
+.folder-list-text {
+  text-decoration: none;
+  color: black;
+  background: #4dc0b5;
+  padding-bottom: 8px;
+  box-shadow: 0px 0px 3px;
+  border: 1px solid #4dc0b5;
 }
