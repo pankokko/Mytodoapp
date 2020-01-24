@@ -62,10 +62,17 @@
 }
 .fa-home {
   margin-left: 10px;
+  margin-right: 10px;
 }
 .fa-search {
   position: absolute;
   color: white;
   top: 7;
   right: 12;
+}
+.dropdown-item {
+  position: absolute;
+  top: 8;
+  right: 55;
+  color: white;
 }

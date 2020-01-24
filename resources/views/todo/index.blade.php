@@ -2,21 +2,21 @@
 @section("title")
 インデックス
 @endsection
-@section("content")
+@section("contents")
 @include("subview.header")
 <div class="index">
   <div class="index-wrapper">
     <div class="index-wrapper-user">
       <div class="index-wrapper-user-text">
-        <p class="index-wrapper-user-text-p">ぱんこっこさんの進捗</p>
+      <p class="index-wrapper-user-text-p">{{Auth::user()->name}}さんの進捗</p>
       </div>
       <div class="index-wrapper-user-picture">
         <a href="#" class="index-wrapper-user-picture-link">
-          <img class="index-wrapper-user-picture-link-image"  src="{{ asset('/storage/temp/DSC01989.JPG') }}"　width="150" height="100" alt="プロフィールアイコン">
+          <img class="index-wrapper-user-picture-link-image"  src="{{ asset('/storage/temp/DSC01989.JPG') }}" width="150" height="100" alt="プロフィールアイコン">
         </a>
       </div>
       <div class="index-wrapper-user-count">
-        <p class="index-wrapper-user-count-text">タスク数: 4</p>
+      <p class="index-wrapper-user-count-text">タスク数: {{$items->count()}}</p>
       </div>
       <div class="index-wrapper-user-status">
         <div class="index-wrapper-user-status-doing">
@@ -72,30 +72,16 @@
           <div class="task-list-trio-updated ">更新日時</div>
         </div>
       </div>
+      @foreach($items as $item)
       <div class="current-tasks">
-          <div class="current-tasks-name"><a class="current-tasks-name-link" href="#">ああああああああああああああああああ</a></div>
-          <div class="current-tasks-trio">
-            <div class="current-tasks-trio-status ">未処理</div>
-            <div class="current-tasks-trio-limit ">2020-1-20</div>
-            <div class="current-tasks-trio-updated ">2020-1-30</div>
-          </div>
+      <div class="current-tasks-name"><a class="current-tasks-name-link" href="#">{{$item->title}}</a></div>
+        <div class="current-tasks-trio">
+          <div class="current-tasks-trio-status ">{{$item->status}}</div>
+          <div class="current-tasks-trio-limit ">{{$item->due}}</div>
+          <div class="current-tasks-trio-updated ">{{$item->updated_at}}</div>
+        </div>
       </div>
-      <div class="current-tasks">
-          <div class="current-tasks-name"><a class="current-tasks-name-link" href="#">ああああああああああああああああああ</a></div>
-          <div class="current-tasks-trio">
-            <div class="current-tasks-trio-status ">処理中</div>
-            <div class="current-tasks-trio-limit ">2020-1-20</div>
-            <div class="current-tasks-trio-updated ">2020-1-30</div>
-          </div>
-      </div>
-      <div class="current-tasks">
-          <div class="current-tasks-name"><a class="current-tasks-name-link" href="#">サンプル</a></div>
-          <div class="current-tasks-trio">
-            <div class="current-tasks-trio-status ">完了</div>
-            <div class="current-tasks-trio-limit ">2020-1-20</div>
-            <div class="current-tasks-trio-updated ">2020-1-30</div>
-          </div>
-      </div>
+      @endforeach
       </div>
   </div>
 </div>

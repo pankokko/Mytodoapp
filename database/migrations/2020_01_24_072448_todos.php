@@ -15,11 +15,17 @@ class Todos extends Migration
     {   
         Schema::create('todos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->biginteger('user_id')->unsigned();
             $table->string('title');
             $table->text('content');
             $table->string("due");
             $table->string("status")->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')
+                  ->references('id')
+                  ->on('users')
+                  ->onDelete('cascade'); 
     
         });
     }

@@ -12,7 +12,7 @@
 </head>
 <body>
 <main class="wrapper">
-  @yield('content')
+  @yield('contents')
 </main>
 
 <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>

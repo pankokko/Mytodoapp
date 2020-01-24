@@ -1,7 +1,8 @@
 @extends("default")
-@section("content")
+@section("contents")
 @include("subview.header")
   <div class="new-container">
+      @if($errors->has('title'))<div class="errors-title">{{ $errors->first('title') }}</div>@endif
     <div class="new-container-wrapper">
       <div class="new-container-wrapper-default">
         <div class="new-container-wrapper-default-title">新しいタスク</div>
@@ -9,7 +10,7 @@
           {{Form::open(['url' => 'todo/create', 'files' => true]  )}}
             {{csrf_field()}}
             <div class="form-wrapper-group">
-              <input type="hidden" name="status" value="">
+              <input type="hidden" name="status" value="処理中">
               {{Form::label("title","Title",["class" => "form-wrapper-group-title"])}}
               <div class="form-wrapper-group-cover">
               {{Form::text("title",null ,["id" => "title" ,"class" => "form-wrapper-group-title-input"])}}  
