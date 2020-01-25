@@ -1,0 +1,69 @@
+.gnav {
+  display: flex;
+  height: 2rem;
+}
+.gnav > li {
+  width: 100%;
+}
+.gnav li {
+  list-style: none;
+  position: relative;
+}
+.gnav-user a {
+  color: black;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.gnav-picture-category {
+  color: #fff;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.gnav-user-name {
+  background-color: #4dc0b5;
+  color: black;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.gnav-picture-category {
+  color: white;
+}
+.gnav li li {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  top: 2px;
+}
+.gnav li li a {
+  background: white;
+  color: black;
+}
+.gnav li:hover > ul > li {
+  height: 2rem;
+  overflow: visible;
+}
+.gnav-list-link {
+  transition: all 0.1s;
+  color: #fff;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.gnav-list-link:hover {
+  background-color: ;
+}

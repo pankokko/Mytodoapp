@@ -1,7 +1,6 @@
 
 .accbox {
     padding: 0;
-    position:relative;
     width:1200px;
 }
 
@@ -11,15 +10,15 @@
     padding : 11px 12px;
     border:1px solid black;
     font-weight: bold;
-  
+    padding-left:40px;
     cursor :pointer;
     transition: all 0.5s;
 }
 
 /*ラベルホバー時*/
-.accbox label:hover {
+// .accbox label:hover {
 
-}
+// }
 
 /*チェックは隠す*/
 .accbox input {

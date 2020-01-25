@@ -16,4 +16,10 @@ public function user(){
 }
 
 
+
+public function Folder(){
+  return $this->belongsTo('App\Folder');
+}
+
+
 }

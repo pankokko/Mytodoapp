@@ -37,20 +37,42 @@
       <div class="index-folder-container">
         <p class="index-folder-container-text">フォルダー</p>
           <div class="folder-add">
-            <a class="folder-add-link" href="#">
-              <p class="folder-add-link-text">フォルダーを追加する</p>
+            <a href="#modal-01">
+              <p class="folder-add-text">フォルダーを追加する<p>
             </a>
+            <div class="modal-wrapper" id="modal-01">
+              <a href="#!" class="modal-overlay"></a>
+                <div class="modal-window">
+                  <div class="modal-content">
+                    {{Form::open(['url' => '/folder/create', 'files' => true]  )}}
+                    {{csrf_field()}}
+                      <div class="form-wrapper-group">
+                        <input type="hidden" name="status" value="処理中">
+                        {{Form::label("folder","folder",["class" => "form-wrapper-group-title"])}}
+                        <div class="form-wrapper-group-cover">
+                        {{Form::text("folder",null ,["id" => "folder" ,"class" => "form-wrapper-group-title-input"])}}  
+                        </div>
+                      </div>
+                      <button type="submit" class="new-submit modal-submit">Submit</button>
+                    {{Form::close()}}
+                </div>
+                <a href="#!" class="modal-close">×</a>
+                </div>
+            </div>
           </div>   
       </div>
-      <a href="#" class="folder-list">
-        <p class="folder-list-text">フォルダー1</p>
-      </a>
-      <a href="#" class="folder-list">
-        <p class="folder-list-text">フォルダー2</p>
-      </a>
-      <a href="#" class="folder-list">
-        <p class="folder-list-text">フォルダー3</p>
-      </a>
+      <div class="gwrapper">      
+      <ul class="gnav">
+        <li class="gnav-user">
+          <a class="gnav-user-name" href="">一覧</a>
+          @foreach($folders as $folder)
+          <ul>
+            <li class="gnav-list"><a class="gnav-list-link" href="#">{{$folder->folder}}</a></li>
+          </ul>
+          @endforeach 
+        </li>
+      </ul>
+      </div>
     </div>
   </div>
   <div class="index-todo">
@@ -72,16 +94,6 @@
           <div class="task-list-trio-updated ">更新日時</div>
         </div>
       </div>
-      {{-- @foreach($items as $item)
-      <div class="current-tasks">
-      <div class="current-tasks-name"><a href="javascript:void(0)" onClick="hogeFunction();return false;" class="current-tasks-name-link" href="#">{{$item->title}}</a> <div class="extra-div"></div></div>
-        <div class="current-tasks-trio">
-          <div class="current-tasks-trio-status ">{{$item->status}}</div>
-          <div class="current-tasks-trio-limit ">{{$item->due}}</div>
-          <div class="current-tasks-trio-updated ">{{$item->updated_at}}</div>
-        </div>
-      </div>
-      @endforeach --}}
       @foreach($items as $item)
       <div class="accbox">
           <!--ラベル1-->
@@ -90,46 +102,15 @@
           <div class="current-tasks-trio-limit ">{{$item->due}}</div>
           <div class="current-tasks-trio-updated ">{{$item->updated_at}}</div>
             </div>
-          <label for="label{{$item->id}}">クリックして表示1</label>
+          <label for="label{{$item->id}}">{{$item->title}}</label>
           <input type="checkbox" id="label{{$item->id}}" class="cssacc" />
             <div class="accshow">
               <!--ここに隠す中身-->
-              <p>
-                こんにちは1
+              <p class="hidden-content">
+                {{$item->content}}
               </p>
             </div>
-            <!--//ラベル1-->
-          <!--ラベル2-->
-            {{-- <label for="label2">クリックして表示2</label>
-            <input type="checkbox" id="label2" class="cssacc" />
-            <div class="accshow">
-              <!--ここに隠す中身-->
-              <p>
-                こんにちは2
-              </p>
-            </div>
-            <!--//ラベル2-->
-          <!--ラベル3-->
-            <label for="label3">クリックして表示3</label>
-            <input type="checkbox" id="label3" class="cssacc" />
-            <div class="accshow">
-              <!--ここに隠す中身-->
-              <p>
-                こんにちは3
-              </p>
-            </div>
-            <!--//ラベル3-->
-          <!--ラベル4-->
-            <label for="label4">クリックして表示4</label>
-            <input type="checkbox" id="label4" class="cssacc" />
-            <div class="accshow">
-              <!--ここに隠す中身-->
-              <p>
-                こんにちは4
-              </p>
-            </div>
-            <!--//ラベル4--> --}}
-        </div><!--//.accbox-->
+        </div>
         @endforeach 
 </div>
 <div class="pagination-wrapper">
@@ -137,5 +118,3 @@
 </div>
 @endsection
 
-
-    

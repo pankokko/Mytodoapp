@@ -224,6 +224,77 @@ textarea {
   line-height: 1.6;
   color: #555;
 }
+.modal-wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 60px 10px;
+  text-align: center;
+}
+.modal-wrapper:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.modal-wrapper:target {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.modal-wrapper::after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -0.05em;
+  vertical-align: middle;
+  content: "";
+}
+.modal-wrapper .modal-window {
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 20;
+  position: relative;
+  width: 70%;
+  height: 200px;
+  max-width: 600px;
+  padding: 30px 30px 15px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .6);
+  vertical-align: middle;
+}
+.modal-wrapper .modal-window .modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.modal-overlay {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .8);
+}
+.modal-wrapper .modal-close {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  color: #95979c !important;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+}
+.modal-wrapper .modal-close:hover {
+  color: #2b2e38 !important;
+}
 /*!
  * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
  * http://cssreset.com
@@ -687,7 +758,6 @@ a {
 }
 .accbox {
   padding: 0;
-  position: relative;
   width: 1200px;
 }
 /*ラベル*/.accbox label {
@@ -695,6 +765,7 @@ a {
   padding : 11px 12px;
   border: 1px solid black;
   font-weight: bold;
+  padding-left: 40px;
   cursor : pointer;
   transition: all 0.5s;
 }
@@ -713,6 +784,75 @@ a {
   padding: 5px;
   background: #eaeaea;
   opacity: 1;
+}
+.gnav {
+  display: flex;
+  height: 2rem;
+}
+.gnav > li {
+  width: 100%;
+}
+.gnav li {
+  list-style: none;
+  position: relative;
+}
+.gnav-user a {
+  color: black;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.gnav-picture-category {
+  color: #fff;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.gnav-user-name {
+  background-color: #4dc0b5;
+  color: black;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.gnav-picture-category {
+  color: white;
+}
+.gnav li li {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  top: 2px;
+}
+.gnav li li a {
+  background: white;
+  color: black;
+}
+.gnav li:hover > ul > li {
+  height: 2rem;
+  overflow: visible;
+}
+.gnav-list-link {
+  transition: all 0.1s;
+  color: #fff;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+.gnav-list-link:hover {
+  background-color: ;
 }
 body {
   background: linen;

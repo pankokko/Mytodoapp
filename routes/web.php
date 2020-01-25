@@ -13,6 +13,8 @@
 Route::get("/", "TodoController@index")->name("todo/index");
 Route::get("todo/new", "TodoController@new")->name("todo/new");
 Route::post("todo/create", "TodoController@create")->name("todo/create");
+Route::post("folder/create", "FoldersController@create")->name("folder/create");
+
 
 Auth::routes();
 
