@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Todos extends Migration
+class Folders extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,11 @@ class Todos extends Migration
      * @return void
      */
     public function up()
-    {   
-        Schema::create('todos', function (Blueprint $table) {
+    {
+        Schema::create('folders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->biginteger('user_id')->unsigned();
-            $table->string('title');
-            $table->text('content');
-            $table->string("due");
-            $table->string("status")->nullable();
+            $table->bigInteger('user_id')->unsigned();
+            $table->string('folder');
             $table->timestamps();
           
             $table->foreign('user_id')
@@ -27,10 +24,9 @@ class Todos extends Migration
                   ->on('users')
                   ->onDelete('cascade'); 
 
-          
 
-               
-    
+        
+
         });
     }
 
@@ -41,5 +37,6 @@ class Todos extends Migration
      */
     public function down()
     {
+        
     }
 }

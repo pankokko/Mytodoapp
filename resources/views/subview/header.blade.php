@@ -1,9 +1,9 @@
 <header class="header">
   <div class="header-wrapper">
     <div class="header-wrapper-left">
-      <a class="header-wrapper-left-link" href="#">
+      <a class="header-wrapper-left-link" href="/">
         <i class="fas fa-home"></i>
-    　</a>
+      </a>
       <div class="header-wrapper-left-search">
         {{Form::open(  ["class" => "search-form"])}}
         {{csrf_field()}}
@@ -20,9 +20,19 @@
       </div>
       <div class="header-wrapper-left-user">
         <a href="#">
-          <img  src="{{ asset('/storage/temp/DSC01989.JPG') }}"　width="30" height="30" alt="プロフィールアイコン">
+          <img  src="{{ asset('/storage/temp/DSC01989.JPG') }} "width="30" height="30" alt="プロフィールアイコン">
         </a>
       </div>
+    </div>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="{{ route('logout') }}"
+           onclick="event.preventDefault();
+           document.getElementById('logout-form').submit();">
+           {{ __('Logout') }}
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
     </div>
   </div>
 </header>
