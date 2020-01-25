@@ -18,8 +18,10 @@ class TodoController extends Controller
 
     public function index(Request $request)
     {
-       $items =  Todo::where("user_id", Auth::id())->get();
-         return view("todo.index",compact("items"));
+       $items =  Todo::where("user_id", Auth::id())->paginate(10);
+       $total = Todo::where("user_id", Auth::id())->get(); //ユーザーのタスク数を取得するため
+       $count = $total->count();
+         return view("todo.index",compact("items","count"));
     }
 
     public function new(Request $request)
@@ -31,7 +33,7 @@ class TodoController extends Controller
     {
 
       Todo::create(["content" => $request->content, "title" => $request->title, "status" =>$request->status, "due" => $request->due, "user_id" => Auth::user()->id]);
-      return view("todo.index");
+      return redirect("/");
         
     }
 }
