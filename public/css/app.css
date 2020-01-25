@@ -125,7 +125,8 @@
   height: 45px;
 }
 .index-todo-container {
-  border: 1px solid black;
+  border-right: 1px ridge black;
+  border-left: 1px ridge black;
   position: relative;
   height: 70px;
   display: flex;
@@ -154,7 +155,7 @@
 .task-list {
   display: flex;
   justify-content: row;
-  border: 1px solid black;
+  border: 1px ridge black;
   padding: 10px;
   font-weight: bold;
 }
@@ -843,6 +844,7 @@ a {
 }
 .gnav-list-link {
   transition: all 0.1s;
+  border: 1px ridge black;
   color: #fff;
   display: block;
   height: 2rem;
@@ -853,6 +855,47 @@ a {
 }
 .gnav-list-link:hover {
   background-color: ;
+}
+.categories-container {
+  width: 1000px;
+  margin: 0 auto;
+}
+.categories-container-wrapper {
+  padding-top: 50px;
+}
+.categories-container-wrapper-title {
+  padding-left: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  border-left: 6px solid #28a7e1;
+}
+.categories-container-wrapper-title-text {
+  padding-top: 20px;
+}
+.categories-pictures {
+  width: 100%;
+  display: flex;
+  justify-content: row;
+  flex-wrap: wrap;
+}
+.categories-pictures-wrapper {
+  margin: 3px;
+}
+.folder-add-index {
+  width: 90px;
+  padding: 5px;
+  background: skyblue;
+  margin-top: 50px;
+  box-shadow: 0 0 3px;
+  margin-bottom: 30px;
+}
+.categories-pictures-wrapper {
+  position: relative;
+}
+.categories-pictures-wrapper-text {
+  color: white;
+  position: absolute;
+  font-weight: bold;
 }
 body {
   background: linen;

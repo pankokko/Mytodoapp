@@ -130,7 +130,8 @@ margin-left:50px;
       height:45px;
     }
     &-container{
-      border: 1px solid black;
+      border-right: 1px ridge black;
+      border-left:1px ridge black;
       position:relative;
       height:70px;
       display:flex;
@@ -161,7 +162,7 @@ margin-left:50px;
 .task-list{
   display:flex;
   justify-content:row;
-  border: 1px solid black;
+  border: 1px ridge black;
   padding:10px;
   font-weight:bold;
   &-name{

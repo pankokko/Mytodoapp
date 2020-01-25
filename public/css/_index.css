@@ -125,7 +125,8 @@
   height: 45px;
 }
 .index-todo-container {
-  border: 1px solid black;
+  border-right: 1px ridge black;
+  border-left: 1px ridge black;
   position: relative;
   height: 70px;
   display: flex;
@@ -154,7 +155,7 @@
 .task-list {
   display: flex;
   justify-content: row;
-  border: 1px solid black;
+  border: 1px ridge black;
   padding: 10px;
   font-weight: bold;
 }
