@@ -5,11 +5,10 @@
 @section("contents")
 @include("subview.header")
 <div class="index">
-  
   <div class="index-wrapper">
     <div class="index-wrapper-user">
       <div class="index-wrapper-user-text">
-      <p class="index-wrapper-user-text-p">{{Auth::user()->name}}さんの進捗</p>
+      <p class="index-wrapper-user-text-p">{{$folder->folder}}</p>
       </div>
       <div class="index-wrapper-user-picture">
         <a href="#" class="index-wrapper-user-picture-link">
@@ -36,10 +35,10 @@
     </div>
     <div class="index-folder">
       <div class="index-folder-container">
-        <p class="index-folder-container-text">フォルダー</p>
+        <p class="index-folder-container-text">フォルダ</p>
           <div class="folder-add">
             <a href="#modal-01">
-              <p class="folder-add-text">フォルダーを追加する<p>
+              <p class="folder-add-text">フォルダを追加する<p>
             </a>
             <div class="modal-wrapper" id="modal-01">
               <a href="#!" class="modal-overlay"></a>
