@@ -10,6 +10,7 @@
           {{Form::open(['url' => 'todo/create', 'files' => true]  )}}
             {{csrf_field()}}
             <div class="form-wrapper-group">
+              <input type="hidden" name="folder_id" value="{{$id}}">
               <input type="hidden" name="status" value="処理中">
               {{Form::label("title","Title",["class" => "form-wrapper-group-title"])}}
               <div class="form-wrapper-group-cover">

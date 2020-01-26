@@ -11,7 +11,6 @@ use App\Http\Requests\TodoRequest;
 class TodoController extends Controller
 
 {
-   
     public function __construct()
     {
       $this->middleware('auth');
@@ -26,16 +25,16 @@ class TodoController extends Controller
          return view("todo.index",compact("items","count","folders"));
     }
 
-    public function new(Request $request)
-    {
-        return view("todo/new");
+    public function new(Request $request,$id)
+    {   
+        
+        return view("todo/new")->with("id",$id);
     }
 
     public function create(TodoRequest $request)
     {
-
-      Todo::create(["content" => $request->content, "title" => $request->title, "status" =>$request->status, "due" => $request->due, "user_id" => Auth::user()->id]);
-      return redirect("/");
+      Todo::create(["content" => $request->content, "folder_id" => $request->folder_id, "title" => $request->title, "status" =>$request->status, "due" => $request->due, "user_id" => Auth::user()->id]);
+      return redirect("folder/$request->folder_id/show");
         
     }
 }

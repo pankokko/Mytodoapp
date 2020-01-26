@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Folder;
+use App\User;
 
 class FoldersController extends Controller
 {
@@ -15,14 +16,15 @@ class FoldersController extends Controller
     }
       
     public function show($id)
-    {
-        return view("folder/show");
+    {   $folder =  Folder::find($id);
+        $folders = Folder::find($id)->todos;
+        $user_folders = User::find(Auth::id())->folders;
+        //eval(\Psy\Sh());
+        return view("folder/show",compact("folders","folder","user_folders"));
     }
-
 
     public function create(Request $request)
     {
-        //eval(\Psy\Sh());
         Folder::create(["folder" =>  $request->folder, "user_id" => Auth::id()]);
          return back();
     }
