@@ -198,9 +198,9 @@
 }
 .current-tasks-trio-status {
   height: 25px;
+  color: white;
   text-align: center;
   border-radius: 4px;
-  background-color: pink;
   padding-right: 5px;
   padding-left: 5px;
   width: 60px;
@@ -214,6 +214,15 @@
   position: absolute;
   left: 260px;
   width: 300px;
+}
+.notyet {
+  background-color: blue;
+}
+.done {
+  background-color: pink;
+}
+.doing {
+  background-color: green;
 }
 textarea {
   width: 100%;

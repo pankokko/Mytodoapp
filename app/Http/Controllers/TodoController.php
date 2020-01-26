@@ -47,8 +47,10 @@ class TodoController extends Controller
 
     public function update(Request $request)
     {
-      Todo::where("id",$request->id)->update(["content" => $request->content, "title" => $request->title]);
+      $folder = Todo::find($request->id)->folder()->first();
+      $id = $folder->id;
+      Todo::where("id",$request->id)->update(["content" => $request->content, "title" => $request->title, "status" => $request->status]);
       //eval(\Psy\Sh());
-      return redirect("todo/edit");
+      return redirect("folder/$id/show");
     }
 }

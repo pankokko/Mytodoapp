@@ -99,7 +99,13 @@
           <!--ラベル1-->
           <div class="current-tasks-trio">
             <div class="current-tasks-trio-edit"><a class="current-tasks-trio-edit-link" href="/todo/{{$folder->id}}/edit">編集</a></div>
-            <div class="current-tasks-trio-status ">{{$folder->status}}</div>
+            @if($folder->status == "未処理")
+              <div class="current-tasks-trio-status notyet">{{$folder->status}}</div>
+            @elseif($folder->status == "処理中")
+              <div class="current-tasks-trio-status doing ">{{$folder->status}}</div>
+            @elseif($folder->status == "完了")
+              <div class="current-tasks-trio-status done ">{{$folder->status}}</div>
+            @endif
             <div class="current-tasks-trio-limit ">{{$folder->due}}</div>
             <div class="current-tasks-trio-updated ">{{$folder->updated_at}}</div>
           </div>

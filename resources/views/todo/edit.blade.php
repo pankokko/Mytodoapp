@@ -7,8 +7,9 @@
       <div class="new-container-wrapper-default">
         <div class="new-container-wrapper-default-title">タスクの編集</div>
         <div class="form-wrapper">
-          {{Form::open(['route' =>['todo/update',$item->id] ,'files' => true, "method" => "PUT" ]  )}}
+          {{Form::open(['route' =>['todo/update',$item->id] ,'files' => true, "method" => "post" ]  )}}
             {{csrf_field()}}
+            {{method_field("PUT")}}
             <div class="form-wrapper-group">
               {{-- <input type="hidden" name="folder_id" value="{{$id}}"> --}}
               <input type="hidden" name="status" value="処理中">
@@ -29,6 +30,14 @@
               {{Form::text("due",$item->due, ["id" => "due_date", "class" => "due_date-label_input"])}}
               </div>
             </div>
+            <div class="select-box-wrapper">status
+                <select name="status" type="text" class="select-box-wrapper-select">
+                  <option></option>
+                  <option name="1" value="処理中">処理中</option>
+                  <option name="2" value="未処理">未処理</option>
+                  <option name="3" value="完了">完了</option> 
+                </select> 
+              </div>
             <button type="submit" class="new-submit">Submit</button>
           {{Form::close()}}
         </div>
