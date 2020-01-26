@@ -21,10 +21,13 @@ class FoldersController extends Controller
       
     public function show($id)
     {   $folder =  Folder::find($id);
-        $folders = Folder::find($id)->todos;
+        $folders = $folder->todos;
+        $notyet = $folders->where("status", "未処理")->count();
+        $doing = $folders->where("status", "処理中")->count();
+        $done = $folders->where("status", "完了")->count();
         $user_folders = User::find(Auth::id())->folders;
-        //eval(\Psy\Sh());
-        return view("folder/show",compact("folders","folder","user_folders"));
+      
+        return view("folder/show",compact("folders","folder","user_folders","notyet","doing","done"));
     }
 
     public function create(Request $request)

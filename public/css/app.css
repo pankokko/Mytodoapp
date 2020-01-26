@@ -477,7 +477,12 @@ a {
   padding: 0;
   width: 1200px;
 }
-/*ラベル*/.accbox label {
+.delete-form-wrapper {
+  position: absolute;
+  top: 5;
+  right: 95;
+}
+/*ラベル*/.accbox label:not(.delete-label) {
   display: block;
   padding : 11px 12px;
   border: 1px solid black;
@@ -809,7 +814,7 @@ a {
 }
 .current-tasks-trio-edit {
   position: absolute;
-  left: -80;
+  left: -100;
 }
 .current-tasks-trio-status {
   height: 25px;

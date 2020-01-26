@@ -16,14 +16,14 @@ class TodoController extends Controller
       $this->middleware('auth');
     }
 
-    public function index(Request $request)
-    {
-       $folders = Folder::where("user_id", Auth::id())->get();
-       $items =  Todo::where("user_id", Auth::id())->paginate(10);
-       $total = Todo::where("user_id", Auth::id())->get(); //ユーザーのタスク数を取得するため
-       $count = $total->count();
-         return view("todo.index",compact("items","count","folders"));
-    }
+    // public function index(Request $request)
+    // {
+    //    $folders = Folder::where("user_id", Auth::id())->get();
+    //    $items =  Todo::where("user_id", Auth::id())->paginate(10);
+    //    $total = Todo::where("user_id", Auth::id())->get(); //ユーザーのタスク数を取得するため
+    //    $count = $total->count();
+    //      return view("todo.index",compact("items","count","folders"));
+    // }
 
     public function new(Request $request,$id)
     {   
@@ -52,5 +52,11 @@ class TodoController extends Controller
       Todo::where("id",$request->id)->update(["content" => $request->content, "title" => $request->title, "status" => $request->status]);
       //eval(\Psy\Sh());
       return redirect("folder/$id/show");
+    }
+
+    public function delete(Request $request,$id)
+    {
+       Todo::find($id)->delete();
+       return back(); 
     }
 }

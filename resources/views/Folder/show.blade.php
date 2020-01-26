@@ -5,6 +5,7 @@
 @section("contents")
 @include("subview.header")
 <div class="index">
+  
   <div class="index-wrapper">
     <div class="index-wrapper-user">
       <div class="index-wrapper-user-text">
@@ -21,15 +22,15 @@
       <div class="index-wrapper-user-status">
         <div class="index-wrapper-user-status-doing">
           <p class="index-wrapper-user-status-doing-text">未処理</p>
-          <div class="index-wrapper-user-status-doing-container"><p class="index-wrapper-user-status-doing-container-text">3</p></div>
+          <div class="index-wrapper-user-status-doing-container"><p class="index-wrapper-user-status-doing-container-text">{{$notyet}}</p></div>
         </div>
         <div class="index-wrapper-user-status-notyet">
             <p class="index-wrapper-user-status-notyet-text">処理中</p>
-            <div class="index-wrapper-user-status-notyet-container"><p class="index-wrapper-user-status-notyet-container-text">1</p></div>
+        <div class="index-wrapper-user-status-notyet-container"><p class="index-wrapper-user-status-notyet-container-text">{{$doing}}</p></div>
         </div>
         <div class="index-wrapper-user-status-done">
             <p class="index-wrapper-user-status-done-text">完了</p>
-            <div class="index-wrapper-user-status-done-container"><p class="index-wrapper-user-status-done-container-text">2</p></div>
+            <div class="index-wrapper-user-status-done-container"><p class="index-wrapper-user-status-done-container-text">{{$done}}</p></div>
         </div>
       </div>
     </div>
@@ -67,7 +68,7 @@
           <a class="gnav-user-name" href="">一覧</a>
           @foreach($user_folders as $folder)
           <ul>
-            <li class="gnav-list"><a class="gnav-list-link" href="#">{{$folder->folder}}</a></li>
+            <li class="gnav-list"><a class="gnav-list-link" href="/folder/{{$folder->id}}/show">{{$folder->folder}}</a></li>
           </ul>
           @endforeach 
         </li>
@@ -99,6 +100,17 @@
           <!--ラベル1-->
           <div class="current-tasks-trio">
             <div class="current-tasks-trio-edit"><a class="current-tasks-trio-edit-link" href="/todo/{{$folder->id}}/edit">編集</a></div>
+            <div class="delete-form-wrapper">
+            <form class="comment-delete" action="/todo/{{$folder->id}}/delete" method="post" >
+                @csrf
+                {{ method_field('delete')}}
+                <label for="delete-input" class="delete-label">
+                <i class="fas fa-trash">
+                  <input id="delete-input"  type="submit" >
+                </i>
+              </label>
+              </form>
+            </div>
             @if($folder->status == "未処理")
               <div class="current-tasks-trio-status notyet">{{$folder->status}}</div>
             @elseif($folder->status == "処理中")
@@ -121,7 +133,7 @@
         @endforeach  
 </div>
 <div class="pagination-wrapper">
-  {{-- {{$folder->links()}} --}}
+  {{-- {{$folder->links()}}  --}}
 </div>
 @endsection
 

@@ -1,11 +1,16 @@
-
 .accbox {
     padding: 0;
     width:1200px;
 }
 
+.delete-form-wrapper{
+    position:absolute;
+    top:5;
+    right:95;
+}
+
 /*ラベル*/
-.accbox label {
+.accbox label:not(.delete-label) {
     display: block;
     padding : 11px 12px;
     border:1px solid black;
@@ -21,7 +26,7 @@
 // }
 
 /*チェックは隠す*/
-.accbox input {
+.accbox  input {
     display: none;
 }
 
