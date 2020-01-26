@@ -1,4 +1,4 @@
-@extends("default")
+{{-- @extends("default")
 @section("title")
 インデックス
 @endsection
@@ -117,4 +117,4 @@
   {{$items->links()}}
 </div>
 @endsection
-
+ --}}

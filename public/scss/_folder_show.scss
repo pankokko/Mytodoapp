@@ -199,6 +199,10 @@ margin-left:50px;
     position:absolute;
     display: flex;
     justify-content:row;
+    &-edit{
+      position:absolute;
+      left:-80;
+    }
     &-status{
       height:25px;
       text-align:center;

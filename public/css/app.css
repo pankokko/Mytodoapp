@@ -1,301 +1,4 @@
-.index-wrapper {
-  width: 1200px;
-  display: flex;
-  justify-content: row;
-  margin-top: 100px;
-  margin-left : auto;
-  margin-right: auto;
-}
-.index-wrapper-user {
-  width: 400px;
-  padding-bottom: 15px;
-  height: 220px;
-  box-shadow: 0px 0px 3px;
-  border: 1px solid #666 6;
-}
-.index-wrapper-user-count {
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 13px;
-}
-.index-wrapper-user-picture {
-  padding-top: 10px;
-  text-align: center;
-}
-.index-wrapper-user-text-p {
-  background-color: #4dc0b5;
-  text-align: center;
-  height: 30px;
-  border: 1px solid #666 6;
-}
-.index-wrapper-user-status {
-  display: flex;
-  justify-content: center;
-}
-.index-wrapper-user-status-doing {
-  text-align: center;
-  width: 85px;
-  margin-right: 40px;
-}
-.index-wrapper-user-status-doing-container {
-  border-radius: 7px;
-  background-color: blue;
-}
-.index-wrapper-user-status-doing-container-text {
-  color: white;
-  font-weight: bold;
-}
-.index-wrapper-user-status-notyet {
-  width: 85px;
-  text-align: center;
-  margin-right: 40px;
-}
-.index-wrapper-user-status-notyet-container {
-  border-radius: 7px;
-  background-color: green;
-}
-.index-wrapper-user-status-notyet-container-text {
-  color: white;
-  text-align: center;
-  font-weight: bold;
-}
-.index-wrapper-user-status-done {
-  text-align: center;
-  width: 85px;
-}
-.index-wrapper-user-status-done-container {
-  border-radius: 7px;
-  background-color: pink;
-}
-.index-wrapper-user-status-done-container-text {
-  color: white;
-  font-weight: bold;
-}
-.index-folder {
-  width: 400px;
-  height: 100px;
-  box-shadow: 0px 0px 3px;
-  border: 1px solid #666 6;
-  margin-left: 50px;
-}
-.index-folder-container {
-  text-align: center;
-  padding-bottom: 23;
-}
-.index-folder-container-text {
-  background-color: #4dc0b5;
-}
-.folder-add {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  border-radius: 7px;
-  box-shadow: 0px 0px 3px;
-  border: 1px solid #666 6;
-  width: 300px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
-.folder-add-link-text {
-  color: black;
-}
-.folder-list {
-  text-align: center;
-  text-decoration: none;
-}
-.folder-list-text {
-  text-decoration: none;
-  color: black;
-  background: #4dc0b5;
-  padding-bottom: 8px;
-  box-shadow: 0px 0px 3px;
-  border: 1px solid #4dc0b5;
-}
-.index-todo {
-  width: 1200px;
-  max-height: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-}
-.index-todo-title {
-  background: green;
-  line-height: 45px;
-  padding-left: 20px;
-  height: 45px;
-}
-.index-todo-container {
-  border-right: 1px ridge black;
-  border-left: 1px ridge black;
-  position: relative;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-}
-.index-todo-container-add {
-  margin-right: 40px;
-  margin-top: 22px;
-  text-align: center;
-  width: 1000px;
-}
-.index-todo-container-add-btn {
-  position: absolute;
-  right: 115px;
-  top: 20px;
-  width: 1000px;
-  padding: 5px;
-  border: 1px solid #666 6;
-  border-radius: 4px;
-  box-shadow: 0px 0px 3px;
-}
-.index-todo-container-add-btn-link-text {
-  font-weight: bold;
-  color: black;
-}
-.task-list {
-  display: flex;
-  justify-content: row;
-  border: 1px ridge black;
-  padding: 10px;
-  font-weight: bold;
-}
-.task-list-name {
-  margin-left: 35px;
-}
-.task-list-trio {
-  margin-left: 680px;
-  display: flex;
-  justify-content: row;
-}
-.task-list-trio-limit {
-  margin-left: 100px;
-}
-.task-list-trio-updated {
-  margin-left: 100px;
-}
-.current-tasks {
-  display: flex;
-  position: relative;
-  justify-content: row;
-  border: 1px solid black;
-  padding: 10px;
-}
-.current-tasks-name {
-  position: absolute;
-  top: 10;
-  left: 38;
-}
-.current-tasks-trio {
-  margin-left: 755px;
-  margin-top: 10px;
-  position: absolute;
-  display: flex;
-  justify-content: row;
-}
-.current-tasks-trio-status {
-  height: 25px;
-  text-align: center;
-  border-radius: 4px;
-  background-color: pink;
-  padding-right: 5px;
-  padding-left: 5px;
-  width: 60px;
-}
-.current-tasks-trio-limit {
-  position: absolute;
-  left: 130px;
-  width: 100px;
-}
-.current-tasks-trio-updated {
-  position: absolute;
-  left: 260px;
-  width: 300px;
-}
-textarea {
-  width: 100%;
-  height: 100px;
-  padding: 6px 12px;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccd0d2;
-  border-radius: 4px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-  display: block;
-  font-size: 14px;
-  line-height: 1.6;
-  color: #555;
-}
-.modal-wrapper {
-  z-index: 999;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 60px 10px;
-  text-align: center;
-}
-.modal-wrapper:not(:target) {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-}
-.modal-wrapper:target {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.4s, visibility 0.4s;
-}
-.modal-wrapper::after {
-  display: inline-block;
-  height: 100%;
-  margin-left: -0.05em;
-  vertical-align: middle;
-  content: "";
-}
-.modal-wrapper .modal-window {
-  box-sizing: border-box;
-  display: inline-block;
-  z-index: 20;
-  position: relative;
-  width: 70%;
-  height: 200px;
-  max-width: 600px;
-  padding: 30px 30px 15px;
-  border-radius: 2px;
-  background: #fff;
-  box-shadow: 0 0 30px rgba(0, 0, 0, .6);
-  vertical-align: middle;
-}
-.modal-wrapper .modal-window .modal-content {
-  max-height: 80vh;
-  overflow-y: auto;
-}
-.modal-overlay {
-  z-index: 10;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, .8);
-}
-.modal-wrapper .modal-close {
-  z-index: 20;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 35px;
-  color: #95979c !important;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 35px;
-  text-align: center;
-  text-decoration: none;
-  text-indent: 0;
-}
-.modal-wrapper .modal-close:hover {
-  color: #2b2e38 !important;
-}
+@import "index";
 /*!
  * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/)
  * http://cssreset.com
@@ -896,6 +599,308 @@ a {
   color: white;
   position: absolute;
   font-weight: bold;
+}
+.index-wrapper {
+  width: 1200px;
+  display: flex;
+  justify-content: row;
+  margin-top: 100px;
+  margin-left : auto;
+  margin-right: auto;
+}
+.index-wrapper-user {
+  width: 400px;
+  padding-bottom: 15px;
+  height: 220px;
+  box-shadow: 0px 0px 3px;
+  border: 1px solid #666 6;
+}
+.index-wrapper-user-count {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 13px;
+}
+.index-wrapper-user-picture {
+  padding-top: 10px;
+  text-align: center;
+}
+.index-wrapper-user-text-p {
+  background-color: #4dc0b5;
+  text-align: center;
+  height: 30px;
+  border: 1px solid #666 6;
+}
+.index-wrapper-user-status {
+  display: flex;
+  justify-content: center;
+}
+.index-wrapper-user-status-doing {
+  text-align: center;
+  width: 85px;
+  margin-right: 40px;
+}
+.index-wrapper-user-status-doing-container {
+  border-radius: 7px;
+  background-color: blue;
+}
+.index-wrapper-user-status-doing-container-text {
+  color: white;
+  font-weight: bold;
+}
+.index-wrapper-user-status-notyet {
+  width: 85px;
+  text-align: center;
+  margin-right: 40px;
+}
+.index-wrapper-user-status-notyet-container {
+  border-radius: 7px;
+  background-color: green;
+}
+.index-wrapper-user-status-notyet-container-text {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.index-wrapper-user-status-done {
+  text-align: center;
+  width: 85px;
+}
+.index-wrapper-user-status-done-container {
+  border-radius: 7px;
+  background-color: pink;
+}
+.index-wrapper-user-status-done-container-text {
+  color: white;
+  font-weight: bold;
+}
+.index-folder {
+  width: 400px;
+  height: 100px;
+  box-shadow: 0px 0px 3px;
+  border: 1px solid #666 6;
+  margin-left: 50px;
+}
+.index-folder-container {
+  text-align: center;
+  padding-bottom: 23;
+}
+.index-folder-container-text {
+  background-color: #4dc0b5;
+}
+.folder-add {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 3px;
+  border: 1px solid #666 6;
+  width: 300px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.folder-add-link-text {
+  color: black;
+}
+.folder-list {
+  text-align: center;
+  text-decoration: none;
+}
+.folder-list-text {
+  text-decoration: none;
+  color: black;
+  background: #4dc0b5;
+  padding-bottom: 8px;
+  box-shadow: 0px 0px 3px;
+  border: 1px solid #4dc0b5;
+}
+.index-todo {
+  width: 1200px;
+  max-height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.index-todo-title {
+  background: green;
+  line-height: 45px;
+  padding-left: 20px;
+  height: 45px;
+}
+.index-todo-container {
+  border-right: 1px ridge black;
+  border-left: 1px ridge black;
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+}
+.index-todo-container-add {
+  margin-right: 40px;
+  margin-top: 22px;
+  text-align: center;
+  width: 1000px;
+}
+.index-todo-container-add-btn {
+  position: absolute;
+  right: 115px;
+  top: 20px;
+  width: 1000px;
+  padding: 5px;
+  border: 1px solid #666 6;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px;
+}
+.index-todo-container-add-btn-link-text {
+  font-weight: bold;
+  color: black;
+}
+.task-list {
+  display: flex;
+  justify-content: row;
+  border: 1px ridge black;
+  padding: 10px;
+  font-weight: bold;
+}
+.task-list-name {
+  margin-left: 35px;
+}
+.task-list-trio {
+  margin-left: 680px;
+  display: flex;
+  justify-content: row;
+}
+.task-list-trio-limit {
+  margin-left: 100px;
+}
+.task-list-trio-updated {
+  margin-left: 100px;
+}
+.current-tasks {
+  display: flex;
+  position: relative;
+  justify-content: row;
+  border: 1px solid black;
+  padding: 10px;
+}
+.current-tasks-name {
+  position: absolute;
+  top: 10;
+  left: 38;
+}
+.current-tasks-trio {
+  margin-left: 755px;
+  margin-top: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: row;
+}
+.current-tasks-trio-edit {
+  position: absolute;
+  left: -80;
+}
+.current-tasks-trio-status {
+  height: 25px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: pink;
+  padding-right: 5px;
+  padding-left: 5px;
+  width: 60px;
+}
+.current-tasks-trio-limit {
+  position: absolute;
+  left: 130px;
+  width: 100px;
+}
+.current-tasks-trio-updated {
+  position: absolute;
+  left: 260px;
+  width: 300px;
+}
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 6px 12px;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccd0d2;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  display: block;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+.modal-wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 60px 10px;
+  text-align: center;
+}
+.modal-wrapper:not(:target) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.modal-wrapper:target {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.modal-wrapper::after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -0.05em;
+  vertical-align: middle;
+  content: "";
+}
+.modal-wrapper .modal-window {
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 20;
+  position: relative;
+  width: 70%;
+  height: 200px;
+  max-width: 600px;
+  padding: 30px 30px 15px;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .6);
+  vertical-align: middle;
+}
+.modal-wrapper .modal-window .modal-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.modal-overlay {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .8);
+}
+.modal-wrapper .modal-close {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35px;
+  color: #95979c !important;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+}
+.modal-wrapper .modal-close:hover {
+  color: #2b2e38 !important;
 }
 body {
   background: linen;

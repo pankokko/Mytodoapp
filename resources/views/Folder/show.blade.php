@@ -98,10 +98,11 @@
       <div class="accbox">
           <!--ラベル1-->
           <div class="current-tasks-trio">
-              <div class="current-tasks-trio-status ">{{$folder->status}}</div>
-          <div class="current-tasks-trio-limit ">{{$folder->due}}</div>
-          <div class="current-tasks-trio-updated ">{{$folder->updated_at}}</div>
-            </div>
+            <div class="current-tasks-trio-edit"><a class="current-tasks-trio-edit-link" href="/todo/{{$folder->id}}/edit">編集</a></div>
+            <div class="current-tasks-trio-status ">{{$folder->status}}</div>
+            <div class="current-tasks-trio-limit ">{{$folder->due}}</div>
+            <div class="current-tasks-trio-updated ">{{$folder->updated_at}}</div>
+          </div>
           <label for="label{{$folder->id}}">{{$folder->title}}</label>
           <input type="checkbox" id="label{{$folder->id}}" class="cssacc" />
             <div class="accshow">
