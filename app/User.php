@@ -38,10 +38,14 @@ class User extends Authenticatable
     ];
 
 
-public function todos(){
-    return $this->hasmany('App\Todo');
-  }
-  
+    public function folders(){
+    return $this->hasmany('App\Folder');
+    }    
+
+    public function todos(){
+        return $this->hasmany('App\Todo');
+    }
+    
 
   
 }

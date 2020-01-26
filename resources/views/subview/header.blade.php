@@ -1,7 +1,7 @@
 <header class="header">
   <div class="header-wrapper">
     <div class="header-wrapper-left">
-      <a class="header-wrapper-left-link" href="/">
+      <a class="header-wrapper-left-link" href="{{route("folder/index")}}">
         <i class="fas fa-home"></i>
       </a>
       <div class="header-wrapper-left-search">
