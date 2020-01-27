@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class folder extends Model
+class Folder extends Model
 {
    protected $fillable = ["user_id","folder"];
 
