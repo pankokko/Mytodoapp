@@ -22,6 +22,9 @@
   padding-top: 10px;
   text-align: center;
 }
+.index-wrapper-user-text {
+  position: relative;
+}
 .index-wrapper-user-text-p {
   background-color: #4dc0b5;
   text-align: center;

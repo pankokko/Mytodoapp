@@ -20,12 +20,15 @@
       padding-top:10px;
      text-align:center;
     }
-    &-text-p{
+    &-text{
+      position:relative;
+    &-p{
       background-color: #4dc0b5;
       text-align:center;
       height:30px;
       border:1px solid #6666;
     }
+  }
   }
 }
 

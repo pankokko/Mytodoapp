@@ -28,4 +28,6 @@ Route::get("/","FoldersController@index")->name("folder/index");
 Route::post("folder/create", "FoldersController@create")->name("folder/create");
 Auth::routes();
 
+Route::get("/user/{id}/show","UserController@show")->name("user/show");
+Route::get("/user/{id}/edit","UserController@edit")->name("user/edit");
 Route::get('/home', 'HomeController@index')->name('home');

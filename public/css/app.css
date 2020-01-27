@@ -641,6 +641,9 @@ a {
   padding-top: 10px;
   text-align: center;
 }
+.index-wrapper-user-text {
+  position: relative;
+}
 .index-wrapper-user-text-p {
   background-color: #4dc0b5;
   text-align: center;
@@ -913,6 +916,11 @@ a {
 }
 .modal-wrapper .modal-close:hover {
   color: #2b2e38 !important;
+}
+.user-link {
+  position: absolute;
+  top: 4;
+  left: 240;
 }
 body {
   background: linen;

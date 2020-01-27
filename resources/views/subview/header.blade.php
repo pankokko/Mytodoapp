@@ -19,7 +19,7 @@
         <p class="header-wrapper-left-wrapper-text">MyTodoapp</p>
       </div>
       <div class="header-wrapper-left-user">
-        <a href="#">
+      <a href="/user/{{Auth::id()}}/show">
           <img  src="//static.mercdn.net/images/member_photo_noimage_thumb.png" width="30" height="30" alt="プロフィールアイコン">
         </a>
       </div>
