@@ -30,4 +30,5 @@ Auth::routes();
 
 Route::get("/user/{id}/show","UserController@show")->name("user/show");
 Route::get("/user/{id}/edit","UserController@edit")->name("user/edit");
+Route::put("/user/{id}/update","UserController@update")->name("user/update");
 Route::get('/home', 'HomeController@index')->name('home');

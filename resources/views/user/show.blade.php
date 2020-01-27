@@ -5,13 +5,17 @@
 <div class="index-wrapper-user">
   <div class="index-wrapper-user-text">
   <a class="user-link" href="/user/{{Auth::id()}}/edit">
-          <i class="fas fa-edit"></i>
-        </a>
+    <i class="fas fa-edit"></i>
+  </a>
   <p class="index-wrapper-user-text-p">{{$user->name}}</p>
   </div>
   <div class="index-wrapper-user-picture">
     <a href="#" class="index-wrapper-user-picture-link">
+      @if($user->icon == null)
       <img class="index-wrapper-user-picture-link-image" src="//static.mercdn.net/images/member_photo_noimage_thumb.png" width="150" height="100" alt="プロフィールアイコン">
+      @else 
+      <img class="index-wrapper-user-picture-link-image"  src="{{ asset('/storage/icon/'.$user->icon) }}" width="150" height="100">
+      @endif
     </a>
   </div>
   <div class="index-wrapper-user-count">
