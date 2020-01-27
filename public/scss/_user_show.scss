@@ -3,3 +3,25 @@ position:absolute;
 top:4;
 left:240;
 }
+
+image {
+  position: relative;
+  margin-top: 40px;
+}
+.image-user-icon {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 200;
+}
+.image-input {
+  display: none;
+}
+.preview {
+  margin-left: 20px;
+  position: absolute;
+  top: 150;
+  z-index: 100;
+  width: 200px;
+}
