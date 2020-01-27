@@ -20,7 +20,7 @@
       </div>
       <div class="header-wrapper-left-user">
         <a href="#">
-          <img  src="{{ asset('/storage/temp/DSC01989.JPG') }} "width="30" height="30" alt="プロフィールアイコン">
+          <img  src="//static.mercdn.net/images/member_photo_noimage_thumb.png" width="30" height="30" alt="プロフィールアイコン">
         </a>
       </div>
     </div>

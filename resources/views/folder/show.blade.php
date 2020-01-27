@@ -12,7 +12,7 @@
       </div>
       <div class="index-wrapper-user-picture">
         <a href="#" class="index-wrapper-user-picture-link">
-          <img class="index-wrapper-user-picture-link-image"  src="{{ asset('/storage/temp/DSC01989.JPG') }}" width="150" height="100" alt="プロフィールアイコン">
+          <img class="index-wrapper-user-picture-link-image"   src="http://get.secret.jp/pt/file/1579959808.jpg" width="150" height="100" alt="プロフィールアイコン">
         </a>
       </div>
       <div class="index-wrapper-user-count">
