@@ -18,4 +18,12 @@ public function folder(){
 }
 
 
+
+public static $rules = array(
+  "title" => "required",
+  "due"   => "required",
+  "content" => "required",
+  "status" => "required"
+);
+
 }

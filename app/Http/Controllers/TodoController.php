@@ -8,6 +8,7 @@ use App\Todo;
 use App\Folder;
 use App\User;
 use App\Http\Requests\TodoRequest;
+use App\Http\Requests\TodoUpdateRequest;
 class TodoController extends Controller
 
 {
@@ -47,6 +48,7 @@ class TodoController extends Controller
 
     public function update(Request $request)
     {
+      $this->Validate($request, Todo::$rules);
       $folder = Todo::find($request->id)->folder()->first();
       $id = $folder->id;
       Todo::where("id",$request->id)->update(["content" => $request->content, "title" => $request->title, "status" => $request->status]);
