@@ -633,6 +633,9 @@ a {
   width: 100%;
   text-align: center;
 }
+#modal-new {
+  height: 400px;
+}
 .index-wrapper {
   width: 1200px;
   display: flex;

@@ -1,4 +1,4 @@
-@extends("default")
+{{-- @extends("default")
 @section("contents")
 @include("subview.header")
   <div class="new-container">
@@ -35,5 +35,6 @@
       </div>
     </div>
   </div>
-@endsection
 
+@endsection
+ --}}
