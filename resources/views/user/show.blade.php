@@ -14,7 +14,7 @@
       @if($user->icon == null)
       <img class="index-wrapper-user-picture-link-image" src="//static.mercdn.net/images/member_photo_noimage_thumb.png" width="150" height="100" alt="プロフィールアイコン">
       @else 
-      <img class="index-wrapper-user-picture-link-image"  src="{{ asset('/storage/icon/'.$user->icon) }}" width="150" height="100">
+      <img class="index-wrapper-user-picture-link-image" src="{{ asset('/storage/icon/'.$user->icon) }}" width="150" height="100">
       @endif
     </a>
   </div>
