@@ -25,6 +25,7 @@ Route::get('/login/callback/github', 'Auth\LoginController@handleProviderCallbac
 
 Route::get("folder/{id}/show","FoldersController@show")->name("folder/show");
 Route::get("/","FoldersController@index")->name("folder/index");
+Route::get("folder/{id}/done","FoldersController@done")->name("folder/done");
 Route::post("folder/create", "FoldersController@create")->name("folder/create");
 Auth::routes();
 
