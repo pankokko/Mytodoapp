@@ -27,7 +27,8 @@ class UserController extends Controller
 
    public function update(Request $request)
    {
-       $image =  $request->file('icon');
+       //eval(\Psy\Sh());
+        $image =  $request->file('icon');
         $filename = time() . '.' . $image->getClientOriginalName();
         $path = public_path('/storage/icon/'.$filename);
          Image::make($image)->resize(300,300)->save($path);
