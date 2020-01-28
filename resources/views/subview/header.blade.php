@@ -20,7 +20,11 @@
       </div>
       <div class="header-wrapper-left-user">
       <a href="/user/{{Auth::id()}}/show">
-          <img  src="//static.mercdn.net/images/member_photo_noimage_thumb.png" width="30" height="30" alt="プロフィールアイコン">
+        @if($user->icon == null)
+        <img  src="//static.mercdn.net/images/member_photo_noimage_thumb.png" width="30" height="30" alt="プロフィールアイコン">
+        @else
+        <img  src="{{ asset('/storage/icon/'.$user->icon) }}" width="30" height="30">
+        @endif
         </a>
       </div>
     </div>

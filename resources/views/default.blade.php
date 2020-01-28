@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
   <title>@yield("title")</title>
 <script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{ asset('/js/modal.js') }}"></script>
 </head>
 <body>
 <main class="wrapper">

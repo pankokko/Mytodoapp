@@ -922,6 +922,30 @@ a {
   top: 4;
   left: 240;
 }
+.image {
+  margin-top: 40px;
+  position: relative;
+  margin-top: 40px;
+}
+.image-user {
+  cursor: pointer;
+}
+.image-user-icon {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 200;
+}
+.image-user-input {
+  display: none;
+}
+#preview {
+  position: absolute;
+  top: 0;
+  left: 200;
+  z-index: 100;
+}
 body {
   background: linen;
 }
