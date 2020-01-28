@@ -74,6 +74,14 @@
       </ul>
       </div>
     </div>
+    <div class="index-wrapper-menu">
+      <p class="index-wrapper-menu-text">メニュー</p>
+      <div class="index-wrapper-menu-list">
+      <a class="index-wrapper-menu-list-link" href="/folder/{{$folder->id}}/done">
+        <p class="index-wrapper-menu-list-text">完了したタスク</p>
+      </a>
+      </div>
+    </div>
   </div>
   <div class="index-todo">
     <p class="index-todo-title">タスク一覧</p>
