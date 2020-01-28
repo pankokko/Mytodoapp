@@ -18,11 +18,11 @@
         </div>
         <div class="image">
           <label class="image-user" for="file_input">
-           user icon 
-            <input id="file_input" type="file" name="icon" class="image-user-input" onChange="imgPreView(event)">
+            user icon 
+          <input id="file_input" type="file" name="icon" class="image-user-input" onChange="imgPreView(event)">
              <div id="preview"></div>
           @if($user->icon == null)
-          <img  src="//static.mercdn.net/images/member_photo_noimage_thumb.png" width="200" height="200" alt="プロフィールアイコン">
+          <img  class="image-user-icon" src="//static.mercdn.net/images/member_photo_noimage_thumb.png" width="200" height="200" alt="プロフィールアイコン">
           @else
           <img class="image-user-icon"  src="{{ asset('/storage/icon/'.$user->icon) }}" width="200" height="200">
           @endif

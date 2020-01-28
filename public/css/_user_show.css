@@ -6,7 +6,6 @@
 .image {
   margin-top: 40px;
   position: relative;
-  margin-top: 40px;
 }
 .image-user {
   cursor: pointer;
@@ -26,4 +25,8 @@
   top: 0;
   left: 200;
   z-index: 100;
+}
+.fa-edit {
+  position: absolute;
+  left: 100;
 }

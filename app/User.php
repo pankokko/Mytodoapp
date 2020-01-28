@@ -47,5 +47,11 @@ class User extends Authenticatable
     }
     
 
+    public static $rules = array(
+        'icon' => 'required',
+        'name' => 'required'
+      );
+  
+
   
 }
