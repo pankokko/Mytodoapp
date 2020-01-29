@@ -17,7 +17,7 @@ class FoldersController extends Controller
     
     public function index(Request $request)
     {
-       $folders = Folder::where("user_id", Auth::id())->paginate(8);
+       $folders = User::find(Auth::id())->folders()->paginate(8);
         return view("folder/index",compact("folders"));
     }
       
@@ -35,7 +35,10 @@ class FoldersController extends Controller
 
     public function create(FolderRequest $request)
     {
-        Folder::create(["folder" =>  $request->folder, "user_id" => Auth::id()]);
+        $user = User::find(Auth::id());
+        Folder::create(["folder" =>  $request->folder]);
+        $folderid = Folder::all()->last()->id;
+        $user->folders()->attach(["folder_id" => $folderid]); 
          return back();
     }
 

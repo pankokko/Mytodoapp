@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Folders extends Migration
+class Invitation extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,19 @@ class Folders extends Migration
      */
     public function up()
     {
-        Schema::create('folders', function (Blueprint $table) {
+        Schema::create('invitations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('folder');
+            $table->biginteger('user_id')->unsigned();
+            $table->string("title");
+            $table->string("reciever");
+            $table->string("status")->nullable();
+            $table->string("url");
             $table->timestamps();
-        
 
-
-        
+           $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");
 
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -32,6 +33,6 @@ class Folders extends Migration
      */
     public function down()
     {
-        
+        //
     }
 }

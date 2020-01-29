@@ -6,12 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Folder extends Model
 {
-   protected $fillable = ["user_id","folder"];
+   protected $fillable = ["folder"];
 
-   public function user()
-   {
-     return $this->belongsTo("App\User");
-   }
+   
+
+   public function users(){
+    return $this->belongsToMany('App\User');
+}    
 
     public function todos()
     {

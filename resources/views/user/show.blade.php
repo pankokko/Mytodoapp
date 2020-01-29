@@ -36,5 +36,11 @@
     </div>
   </div>
 </div> 
+<div class="index-wrapper-menu">
+  <p class="index-wrapper-menu-text">メニュー</p>
+  <div class="index-wrapper-menu-list">  
+    <a class="index-wrapper-menu-list-link" href="/folder/done">招待状: 0</a>
+  </div>
+</div>
 </div>
 @endsection
