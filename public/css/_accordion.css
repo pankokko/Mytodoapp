@@ -24,7 +24,7 @@
   padding: 0;
   overflow: hidden;
   opacity: 0;
-  transition: 0.8s;
+  transition: 0.4s;
 }
 /*クリックで中身表示*/.cssacc:checked + .accshow {
   height: auto;

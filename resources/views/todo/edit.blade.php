@@ -32,7 +32,6 @@
             </div>
             <div class="select-box-wrapper">status
                 <select name="status" type="text" class="select-box-wrapper-select">
-                  <option></option>
                   <option name="1" value="処理中">処理中</option>
                   <option name="2" value="未処理">未処理</option>
                   <option name="3" value="完了">完了</option> 

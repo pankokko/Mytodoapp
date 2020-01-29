@@ -18,7 +18,7 @@ class Todos extends Migration
             $table->biginteger('user_id')->unsigned();
             $table->string('title');
             $table->text('content');
-            $table->string("due");
+            $table->date("due");
             $table->string("status")->nullable();
             $table->timestamps();
           

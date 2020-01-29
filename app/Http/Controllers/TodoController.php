@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Todo;
-use App\Folder;
 use App\User;
 use App\Http\Requests\TodoRequest;
 use App\Http\Requests\TodoUpdateRequest;
@@ -15,21 +14,6 @@ class TodoController extends Controller
     public function __construct()
     {
       $this->middleware('auth');
-    }
-
-    // public function index(Request $request)
-    // {
-    //    $folders = Folder::where("user_id", Auth::id())->get();
-    //    $items =  Todo::where("user_id", Auth::id())->paginate(10);
-    //    $total = Todo::where("user_id", Auth::id())->get(); //ユーザーのタスク数を取得するため
-    //    $count = $total->count();
-    //      return view("todo.index",compact("items","count","folders"));
-    // }
-
-    public function new(Request $request,$id)
-    {   
-        
-        return view("todo/new")->with("id",$id);
     }
 
     public function create(TodoRequest $request)
@@ -42,7 +26,6 @@ class TodoController extends Controller
     public function edit(Request $request,$id)
     {
      $item = Todo::find($id);
-
       return view("todo/edit")->with("item", $item);
     }
 

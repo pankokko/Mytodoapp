@@ -14,6 +14,7 @@ class TodoUpdateRequest extends FormRequest
     public function authorize()
     {
         if($this->path() == "todo/update"){
+          
             return true;
         }else{
             return false;

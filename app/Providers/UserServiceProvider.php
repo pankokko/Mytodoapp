@@ -28,9 +28,11 @@ class UserServiceProvider extends ServiceProvider
     public function boot()
     {
       View::composer(
-          "subview.header",function($view){
+          ["subview.header","user.edit"],function($view){
               $view->with("user", User::find(Auth::id()));
+              //eval(\Psy\Sh());
           }
+          
         );
     }
 }

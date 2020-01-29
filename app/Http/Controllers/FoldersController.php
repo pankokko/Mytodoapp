@@ -22,9 +22,9 @@ class FoldersController extends Controller
     }
       
     public function show($id)
-    {   $folder =  Folder::find($id);
+    {  
+      $folder =  Folder::find($id);
         $folders = $folder->todos;
-        // eval(\Psy\Sh());
         $notyet = $folders->where("status", "未処理")->count();
         $doing = $folders->where("status", "処理中")->count();
         $done = $folders->where("status", "完了")->count();
