@@ -39,7 +39,7 @@
 <div class="index-wrapper-menu">
   <p class="index-wrapper-menu-text">メニュー</p>
   <div class="index-wrapper-menu-list">  
-    <a class="index-wrapper-menu-list-link" href="/folder/done">招待状: 0</a>
+    <a class="index-wrapper-menu-list-link" href="/user/{{Auth::id()}}/list">招待管理</a>
   </div>
 </div>
 </div>
