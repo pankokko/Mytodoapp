@@ -27,9 +27,12 @@ Route::get("folder/{id}/show","FoldersController@show")->name("folder/show");
 Route::get("/","FoldersController@index")->name("folder/index");
 Route::get("folder/{id}/done","FoldersController@done")->name("folder/done");
 Route::post("folder/create", "FoldersController@create")->name("folder/create");
+Route::get("invitation/new", "InvitationsController@new")->name("invitation/new");
+
 Auth::routes();
 
 Route::get("/user/{id}/show","UserController@show")->name("user/show");
+Route::get("/user/{id}/list","UserController@list")->name("user/list");
 Route::get("/user/{id}/edit","UserController@edit")->name("user/edit");
 Route::put("/user/{id}/update","UserController@update")->name("user/update");
 Route::get('/home', 'HomeController@index')->name('home');

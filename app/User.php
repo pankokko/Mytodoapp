@@ -39,8 +39,13 @@ class User extends Authenticatable
 
 
     public function folders(){
-    return $this->hasmany('App\Folder');
+        return $this->belongsToMany('App\Folder');
     }    
+
+  public function invitations()
+  {
+      return $this->hasmany("App\Invitation");
+  }
 
     public function todos(){
         return $this->hasmany('App\Todo');

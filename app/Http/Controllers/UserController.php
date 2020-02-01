@@ -18,23 +18,24 @@ class UserController extends Controller
         return view("user/show",compact("user","todos","done","notyet","doing"));
     }
 
-   public function edit(Request $request)
+   public function list(Request $request)
    {
-        
-       $user = User::find(Auth::id());
-       return view("user/edit",compact("user"));
+       return view("user/list");
+   }
+
+   public function edit(Request $request)
+   {        
+       return view("user/edit");
    }
 
    public function update(Request $request,$id)
-   {
-       //eval(\Psy\Sh());
+   {  
        $this->Validate($request, User::$rules);       
         $image =  $request->file('icon');
         $filename = time() . '.' . $image->getClientOriginalName();
         $path = public_path('/storage/icon/'.$filename);
-         Image::make($image)->resize(300,300)->save($path);
+        Image::make($image)->resize(300,300)->save($path);
         User::find(Auth::id())->update(["icon" => basename($path),"name" => $request->name]);
-  
         return redirect("user/$id/show");
    }
 }

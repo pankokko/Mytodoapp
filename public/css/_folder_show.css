@@ -227,6 +227,9 @@
 .doing {
   background-color: green;
 }
+.hidden-content {
+  margin-left: 30px;
+}
 .modal-wrapper {
   z-index: 999;
   position: fixed;

@@ -16,7 +16,7 @@
         {{Form::close()}}
       </div>
       <div class="header-wrapper-left-wrapper" >
-        <p class="header-wrapper-left-wrapper-text">MyTodoapp</p>
+        <p class="header-wrapper-left-wrapper-text">OurTodoapp</p>
       </div>
       <div class="header-wrapper-left-user">
       <a href="/user/{{Auth::id()}}/show">

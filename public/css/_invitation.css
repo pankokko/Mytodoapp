@@ -1,0 +1,16 @@
+.invitation {
+  width: 1000px;
+  margin: 0 auto;
+}
+.invitation-wrapper {
+  width: 500px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.invitation-wrapper-p {
+  background-color: #4dc0b5;
+  box-shadow: 0px 0px 3px;
+  border: 1px solid #666 6;
+}

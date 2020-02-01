@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Todos extends Migration
+class Invitation extends Migration
 {
     /**
      * Run the migrations.
@@ -12,28 +12,20 @@ class Todos extends Migration
      * @return void
      */
     public function up()
-    {   
-        Schema::create('todos', function (Blueprint $table) {
+    {
+        Schema::create('invitations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->biginteger('user_id')->unsigned();
-            $table->string('title');
-            $table->text('content');
-            $table->date("due");
+            $table->string("title");
+            $table->string("reciever");
             $table->string("status")->nullable();
+            $table->string("url");
             $table->timestamps();
-          
-            $table->foreign('user_id')
-                  ->references('id')
-                  ->on('users')
-                  ->onDelete('cascade'); 
 
-          
+           $table->foreign("user_id")->references("id")->on("users")->onDelete("cascade");
 
-               
-    
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -41,5 +33,6 @@ class Todos extends Migration
      */
     public function down()
     {
+        //
     }
 }
