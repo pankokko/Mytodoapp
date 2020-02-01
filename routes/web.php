@@ -31,6 +31,8 @@ Route::get("invitation/new", "InvitationsController@new")->name("invitation/new"
 
 Auth::routes();
 
+Route::post("/invitation/create","InvitationsController@create");
+
 Route::get("/user/{id}/show","UserController@show")->name("user/show");
 Route::get("/user/{id}/list","UserController@list")->name("user/list");
 Route::get("/user/{id}/edit","UserController@edit")->name("user/edit");

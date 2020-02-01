@@ -81,6 +81,30 @@
         <p class="index-wrapper-menu-list-text">完了したタスク</p>
       </a>
       </div>
+      <div class="index-wrapper-menu-list">
+          <a href="#modal-03">
+              <p class="folder-add-text">招待状を送る<p>
+            </a>
+            <div class="modal-wrapper" id="modal-03">
+              <a href="#!" class="modal-overlay"></a>
+                <div class="modal-window">
+                  <div class="modal-content">
+                    {{Form::open(['url' => '/invitation/create', 'files' => true,"method" => "POST"]  )}}
+                    {{csrf_field()}}
+                      <div class="form-wrapper-group">
+                        <input type="hidden" name="url" value="{{$folder->id}}" value="処理中">
+                        {{Form::label("reciever","username",["class" => "form-wrapper-group-title"])}}
+                        <div class="form-wrapper-group-cover">
+                        {{Form::text("reciever",null ,["id" => "reciever" ,"class" => "form-wrapper-group-title-input"])}}  
+                        </div>
+                      </div>
+                      <button type="submit" class="new-submit modal-submit">Submit</button>
+                    {{Form::close()}}
+                </div>
+                <a href="#!" class="modal-close">×</a>
+                </div>
+            </div>
+      </div>
     </div>
   </div>
   <div class="index-todo">
@@ -124,7 +148,7 @@
           </div>
       </div>
     </div>
-      </div>
+  </div>
     </div>
       <div class="task-list">
         <div class="task-list-name">課題名</div>

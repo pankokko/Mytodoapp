@@ -16,7 +16,6 @@ class Invitation extends Migration
         Schema::create('invitations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->biginteger('user_id')->unsigned();
-            $table->string("title");
             $table->string("reciever");
             $table->string("status")->nullable();
             $table->string("url");
