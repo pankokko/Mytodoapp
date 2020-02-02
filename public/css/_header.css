@@ -76,3 +76,8 @@
   right: 55;
   color: white;
 }
+.news {
+  text-align: center;
+  height: 25px;
+  background-color: orange;
+}

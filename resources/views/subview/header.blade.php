@@ -40,3 +40,10 @@
     </div>
   </div>
 </header>
+@if($invite->count() >= 1 )
+<nav class="news">
+  <div class="news-wrapper">
+  <a href="{{asset("user/$user->id/list")}}">招待が届きました</a>
+  </div>
+@endif
+</nav>

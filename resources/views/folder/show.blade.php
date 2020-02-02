@@ -93,7 +93,7 @@
                     {{csrf_field()}}
                       <div class="form-wrapper-group">
                         <input type="hidden" name="url" value="{{$folder->id}}" value="処理中">
-                        {{Form::label("reciever","username",["class" => "form-wrapper-group-title"])}}
+                        {{Form::label("reciever","To",["class" => "form-wrapper-group-title"])}}
                         <div class="form-wrapper-group-cover">
                         {{Form::text("reciever",null ,["id" => "reciever" ,"class" => "form-wrapper-group-title-input"])}}  
                         </div>

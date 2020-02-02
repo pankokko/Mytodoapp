@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
-
+use App\Invitation;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -29,10 +29,15 @@ class UserServiceProvider extends ServiceProvider
     {
       View::composer(
           ["subview.header","user.edit"],function($view){
-              $view->with("user", User::find(Auth::id()));
-              //eval(\Psy\Sh());
+           $invite = Invitation::where("reciever", Auth::user()->name)->get();
+              $view->with("invite",$invite);
           }
-          
         );
+        View::composer(
+            ["subview.header","user.edit"],function($view){
+              $user = User::find(Auth::id());
+                $view->with("user",$user);
+            }
+          );
     }
 }

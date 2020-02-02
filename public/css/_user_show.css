@@ -26,6 +26,9 @@
   left: 200;
   z-index: 100;
 }
+.mypage {
+  height: 60px;
+}
 .fa-edit {
   position: absolute;
   left: 100;

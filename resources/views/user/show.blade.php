@@ -36,7 +36,7 @@
     </div>
   </div>
 </div> 
-<div class="index-wrapper-menu">
+<div class="index-wrapper-menu mypage">
   <p class="index-wrapper-menu-text">メニュー</p>
   <div class="index-wrapper-menu-list">  
     <a class="index-wrapper-menu-list-link" href="/user/{{Auth::id()}}/list">招待管理</a>

@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 use App\User;
+use App\Invitation;
 use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
     public function show(Request $request)
     {
+    
+     //eval(\Psy\Sh());
       $user = User::find(Auth::id());
       $todos = $user->todos;
       $doing = $todos->where("status" ,"未処理");
