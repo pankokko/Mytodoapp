@@ -19,9 +19,7 @@ Route::put("todo/{id}/update","TodoController@update")->name("todo/update");
 Route::delete("todo/{id}/delete","TodoController@delete")->name("todo/delete");
 
 Route::get('login/github', 'Auth\LoginController@redirectToProvider');
-
 Route::get('/login/callback/github', 'Auth\LoginController@handleProviderCallback');
-
 
 Route::get("folder/{id}/show","FoldersController@show")->name("folder/show");
 Route::get("/","FoldersController@index")->name("folder/index");
@@ -37,4 +35,4 @@ Route::get("/user/{id}/show","UserController@show")->name("user/show");
 Route::get("/user/{id}/list","UserController@list")->name("user/list");
 Route::get("/user/{id}/edit","UserController@edit")->name("user/edit");
 Route::put("/user/{id}/update","UserController@update")->name("user/update");
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
